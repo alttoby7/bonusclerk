@@ -26,6 +26,12 @@ export function Nav() {
             >
               All Bonuses
             </Link>
+            <Link
+              href="/dd-checker"
+              className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+            >
+              DD Checker
+            </Link>
             <div className="relative group">
               <button className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors flex items-center gap-1">
                 Guides
@@ -80,6 +86,13 @@ export function Nav() {
               onClick={() => setMobileOpen(false)}
             >
               All Bonuses
+            </Link>
+            <Link
+              href="/dd-checker"
+              className="block px-2 py-3 text-sm font-medium text-text-secondary hover:text-text-primary"
+              onClick={() => setMobileOpen(false)}
+            >
+              DD Checker
             </Link>
             {pillars.map(pillar => (
               <Link
