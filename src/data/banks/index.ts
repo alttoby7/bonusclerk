@@ -1,0 +1,138 @@
+import type { Bank } from '@/types/bonus';
+
+export const banks: Bank[] = [
+  {
+    slug: 'chase',
+    name: 'Chase Bank',
+    shortName: 'Chase',
+    website: 'https://www.chase.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'One of the largest U.S. banks. Known for generous checking bonuses and a wide branch network.',
+  },
+  {
+    slug: 'wells-fargo',
+    name: 'Wells Fargo',
+    shortName: 'Wells Fargo',
+    website: 'https://www.wellsfargo.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Major national bank offering checking, savings, and business account bonuses.',
+  },
+  {
+    slug: 'capital-one',
+    name: 'Capital One',
+    shortName: 'Capital One',
+    website: 'https://www.capitalone.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Online-forward bank with competitive HYSA rates and no-fee checking accounts.',
+  },
+  {
+    slug: 'citi',
+    name: 'Citibank',
+    shortName: 'Citi',
+    website: 'https://www.citi.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Global bank offering tiered checking bonuses based on deposit amount.',
+  },
+  {
+    slug: 'us-bank',
+    name: 'U.S. Bank',
+    shortName: 'U.S. Bank',
+    website: 'https://www.usbank.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Fifth-largest U.S. bank with regular checking and savings bonus offers.',
+  },
+  {
+    slug: 'pnc',
+    name: 'PNC Bank',
+    shortName: 'PNC',
+    website: 'https://www.pnc.com',
+    isFDICInsured: true,
+    isNationwide: false,
+    description: 'Major regional bank available in most eastern and midwestern states.',
+  },
+  {
+    slug: 'sofi',
+    name: 'SoFi',
+    shortName: 'SoFi',
+    website: 'https://www.sofi.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Online bank with high APY checking/savings and generous direct deposit bonuses.',
+  },
+  {
+    slug: 'chime',
+    name: 'Chime',
+    shortName: 'Chime',
+    website: 'https://www.chime.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Popular neobank with no-fee accounts and early direct deposit.',
+  },
+  {
+    slug: 'td-bank',
+    name: 'TD Bank',
+    shortName: 'TD Bank',
+    website: 'https://www.td.com',
+    isFDICInsured: true,
+    isNationwide: false,
+    description: 'East Coast bank known for extended hours and regular bonus promotions.',
+  },
+  {
+    slug: 'huntington',
+    name: 'Huntington Bank',
+    shortName: 'Huntington',
+    website: 'https://www.huntington.com',
+    isFDICInsured: true,
+    isNationwide: false,
+    description: 'Midwest bank offering competitive checking bonuses in select states.',
+  },
+  {
+    slug: 'bmo',
+    name: 'BMO',
+    shortName: 'BMO',
+    website: 'https://www.bmo.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Canadian-owned bank offering competitive checking and savings rates in the U.S.',
+  },
+  {
+    slug: 'amex',
+    name: 'American Express',
+    shortName: 'Amex',
+    website: 'https://www.americanexpress.com/en-us/banking/',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Known for their high-yield savings account with competitive APY.',
+  },
+  {
+    slug: 'discover',
+    name: 'Discover Bank',
+    shortName: 'Discover',
+    website: 'https://www.discover.com/online-banking/',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Online bank with no-fee savings and checking plus cashback debit rewards.',
+  },
+  {
+    slug: 'bank-of-america',
+    name: 'Bank of America',
+    shortName: 'BofA',
+    website: 'https://www.bankofamerica.com',
+    isFDICInsured: true,
+    isNationwide: true,
+    description: 'Second-largest U.S. bank with periodic checking and savings bonus offers.',
+  },
+];
+
+export function getBank(slug: string): Bank | undefined {
+  return banks.find(b => b.slug === slug);
+}
+
+export function getAllBankSlugs(): string[] {
+  return banks.map(b => b.slug);
+}

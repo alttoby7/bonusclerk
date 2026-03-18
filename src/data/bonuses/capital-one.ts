@@ -1,0 +1,40 @@
+import type { BankBonus } from '@/types/bonus';
+
+export const capitalOneBonuses: BankBonus[] = [
+  {
+    id: 'cap1-360-checking-250',
+    bank: 'Capital One',
+    bankSlug: 'capital-one',
+    accountType: 'checking',
+    bonusAmount: 250,
+    bonusDescription: 'Open a 360 Checking account with qualifying direct deposits.',
+    requirements: {
+      directDeposit: { amount: 500, frequency: '2 direct deposits within 75 days' },
+    },
+    fees: { monthly: 0, waivable: false },
+    expirationDate: '2026-06-15',
+    timeToBonus: '60 days after qualifying',
+    keepOpenMonths: 6,
+    availability: 'nationwide',
+    isActive: true,
+    lastVerified: '2026-03-18',
+    tags: ['no-fee', 'easy-dd'],
+  },
+  {
+    id: 'cap1-360-savings-hysa',
+    bank: 'Capital One',
+    bankSlug: 'capital-one',
+    accountType: 'savings',
+    bonusAmount: 0,
+    bonusDescription: 'No bonus — but 4.00% APY with no minimum balance or fees.',
+    requirements: {},
+    fees: { monthly: 0, waivable: false },
+    apy: 4.0,
+    timeToBonus: 'N/A',
+    keepOpenMonths: 0,
+    availability: 'nationwide',
+    isActive: true,
+    lastVerified: '2026-03-18',
+    tags: ['hysa', 'no-fee', 'no-minimum'],
+  },
+];
