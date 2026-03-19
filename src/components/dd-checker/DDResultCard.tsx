@@ -3,7 +3,7 @@
 import type { DDPairRollup, Institution } from '@/types/dd-checker';
 import { Card } from '@/components/ui/Card';
 import { StatusBadge } from './StatusBadge';
-import { ConfidenceDot } from './ConfidenceDot';
+import { ConfidenceMeter } from './ConfidenceMeter';
 
 const borderColors: Record<string, string> = {
   'likely-works': 'border-l-success',
@@ -29,7 +29,7 @@ export function DDResultCard({
   destination: Institution;
 }) {
   return (
-    <Card className={`border-l-4 ${borderColors[rollup.verdict]}`} padding="lg">
+    <Card className={`border-l-4 ${borderColors[rollup.verdict]} animate-slide-up`} padding="lg">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">
@@ -49,7 +49,7 @@ export function DDResultCard({
           </div>
           <div>
             <div className="mb-0.5">
-              <ConfidenceDot level={rollup.confidenceLevel} />
+              <ConfidenceMeter level={rollup.confidenceLevel} score={rollup.confidenceScore} />
             </div>
             <div className="text-xs text-text-tertiary">Confidence</div>
           </div>

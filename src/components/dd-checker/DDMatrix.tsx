@@ -122,10 +122,13 @@ export function DDMatrix({
                               ? null
                               : { source: source.slug, dest: dest.slug }
                           )}
-                          className="inline-flex items-center justify-center h-6 w-6 rounded hover:bg-surface-raised transition-colors"
+                          className="inline-flex items-center justify-center h-6 w-6 rounded hover:bg-surface-raised hover:scale-125 transition-all"
                           title={`${source.shortName ?? source.name} → ${dest.shortName ?? dest.name}: ${dotLabels[verdict]}`}
                         >
-                          <span className={`inline-block h-3 w-3 rounded-full ${dotColors[verdict]}`} />
+                          <span
+                            className={`inline-block h-3 w-3 rounded-full ${dotColors[verdict]}`}
+                            style={{ opacity: rollup ? Math.max(0.3, rollup.confidenceScore) : 0.1 }}
+                          />
                         </button>
                         {popover?.source === source.slug && popover?.dest === dest.slug && rollup && (
                           <div className="absolute z-20 left-1/2 -translate-x-1/2 top-full mt-1 w-48 rounded-lg border border-border bg-surface p-3 shadow-lg text-left">

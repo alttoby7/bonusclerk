@@ -38,3 +38,12 @@ export interface DDPairRollup {
   latestObservedOn: string | null;
   updatedAt: string;
 }
+
+export interface MethodGuide {
+  type: InstitutionType;
+  title: string;
+  steps: string[];
+  processingTime: string;
+  tips: string[];
+  warnings: string[];
+}

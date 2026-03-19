@@ -1,17 +1,22 @@
+import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { FeaturedBonuses } from '@/components/bonus/FeaturedBonuses';
 import { BonusRow } from '@/components/bonus/BonusRow';
+import { StatusBadge } from '@/components/dd-checker/StatusBadge';
 import { allBonuses, getActiveBonuses, getTotalBonusValue, sortBonuses } from '@/data/bonuses';
 import { pillars } from '@/data/pillars';
 import { formatMoney } from '@/lib/dates';
+import { getTotalDataPoints, getPopularPairs, getInstitution } from '@/lib/dd/repository';
 
 export default function HomePage() {
   const activeBonuses = getActiveBonuses();
   const topBonuses = sortBonuses(activeBonuses.filter(b => b.bonusAmount > 0), 'bonusAmount', 'desc').slice(0, 6);
   const tableBonuses = sortBonuses(activeBonuses.filter(b => b.bonusAmount > 0), 'bonusAmount', 'desc').slice(0, 10);
   const totalValue = getTotalBonusValue();
+  const ddDataPoints = getTotalDataPoints();
+  const ddPopular = getPopularPairs(4);
 
   return (
     <>
@@ -120,6 +125,43 @@ export default function HomePage() {
                 </p>
               </a>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* DD Checker Promo */}
+      <section className="py-12 bg-surface border-y border-border">
+        <Container>
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-md">
+              <h2 className="text-2xl font-bold text-text-primary mb-2">DD Compatibility Checker</h2>
+              <p className="text-sm text-text-secondary mb-4">
+                Does your ACH push count as a direct deposit? Check before you transfer. Based on{' '}
+                <span className="font-semibold text-text-primary">{ddDataPoints}</span> community-verified data points.
+              </p>
+              <Button href="/dd-checker" size="md">
+                Check Compatibility →
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:w-96">
+              {ddPopular.map(r => {
+                const src = getInstitution(r.sourceInstitutionSlug);
+                const dest = getInstitution(r.destinationBankSlug);
+                if (!src || !dest) return null;
+                return (
+                  <Link key={`${r.sourceInstitutionSlug}-${r.destinationBankSlug}`} href={`/dd-checker/${dest.slug}`}>
+                    <Card hover padding="sm">
+                      <div className="text-xs font-medium text-text-primary truncate">
+                        {src.shortName ?? src.name} → {dest.shortName ?? dest.name}
+                      </div>
+                      <div className="mt-1">
+                        <StatusBadge status={r.verdict} />
+                      </div>
+                    </Card>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </Container>
       </section>

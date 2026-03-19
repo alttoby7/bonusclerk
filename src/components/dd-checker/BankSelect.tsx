@@ -13,6 +13,16 @@ const typeLabels: Record<string, string> = {
   other: 'Other',
 };
 
+const typeBadgeColors: Record<string, string> = {
+  bank: 'bg-accent-light text-accent',
+  brokerage: 'bg-success-light text-success',
+  fintech: 'bg-warning-light text-warning',
+  p2p: 'bg-danger-light text-danger',
+  payroll: 'bg-surface-raised text-text-secondary',
+  government: 'bg-surface-raised text-text-secondary',
+  other: 'bg-surface-raised text-text-secondary',
+};
+
 export function BankSelect({
   institutions,
   value,
@@ -118,6 +128,11 @@ export function BankSelect({
                       {(inst.shortName ?? inst.name).charAt(0)}
                     </span>
                     {inst.shortName ?? inst.name}
+                    {!inst.isTrackedBank && (
+                      <span className={`ml-auto text-[10px] px-1.5 py-0.5 rounded-full font-medium ${typeBadgeColors[inst.type] ?? ''}`}>
+                        {typeLabels[inst.type]}
+                      </span>
+                    )}
                   </button>
                 ))}
               </div>

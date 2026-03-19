@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { pillars } from '@/data/pillars';
 import { getTrackedBanks } from '@/lib/dd/repository';
+import { allBonuses } from '@/data/bonuses';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://bonusclerk.com';
@@ -29,5 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...pillarPages, ...ddBankPages];
+  const ddBonusMissionPages: MetadataRoute.Sitemap = allBonuses
+    .filter(b => b.isActive && b.requirements.directDeposit)
+    .map(b => ({
+      url: `${baseUrl}/dd-checker/bonus/${b.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }));
+
+  return [...staticPages, ...pillarPages, ...ddBankPages, ...ddBonusMissionPages];
 }

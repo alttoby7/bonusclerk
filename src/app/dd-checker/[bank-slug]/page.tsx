@@ -5,12 +5,14 @@ import { Container } from '@/components/layout/Container';
 import { Card } from '@/components/ui/Card';
 import { StatusBadge } from '@/components/dd-checker/StatusBadge';
 import { ConfidenceDot } from '@/components/dd-checker/ConfidenceDot';
+import { InboundRollupsTable } from '@/components/dd-checker/InboundRollupsTable';
 import {
   getTrackedBanks,
   getInstitution,
   getRollupsForDestination,
   getRollupsForSource,
   getAllInstitutions,
+  getEvidenceTimeline,
 } from '@/lib/dd/repository';
 import { getBonusesByBank } from '@/data/bonuses';
 
@@ -45,6 +47,12 @@ export default async function BankDDPage({ params }: Props) {
     .sort((a, b) => b.approvedEvidenceCount - a.approvedEvidenceCount);
   const bonuses = getBonusesByBank(slug).filter(b => b.isActive);
   const name = bank.shortName ?? bank.name;
+
+  // Build evidence map for expandable rows
+  const evidenceBySource: Record<string, import('@/types/dd-checker').DDEvidence[]> = {};
+  for (const r of inboundRollups) {
+    evidenceBySource[r.sourceInstitutionSlug] = getEvidenceTimeline(r.sourceInstitutionSlug, slug);
+  }
 
   return (
     <Container>
@@ -84,49 +92,11 @@ export default async function BankDDPage({ params }: Props) {
               <h2 className="text-lg font-semibold text-text-primary mb-4">
                 What Counts as Direct Deposit at {name}
               </h2>
-              {inboundRollups.length === 0 ? (
-                <p className="text-sm text-text-tertiary">No data available yet.</p>
-              ) : (
-                <Card padding="sm" className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-border">
-                        <th className="px-3 py-2 text-left text-xs font-medium text-text-tertiary">Source</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-text-tertiary">Status</th>
-                        <th className="px-3 py-2 text-left text-xs font-medium text-text-tertiary hidden sm:table-cell">Confidence</th>
-                        <th className="px-3 py-2 text-right text-xs font-medium text-text-tertiary">Data Points</th>
-                        <th className="px-3 py-2 text-right text-xs font-medium text-text-tertiary hidden md:table-cell">Last Verified</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {inboundRollups.map(r => {
-                        const src = allInstitutions.find(i => i.slug === r.sourceInstitutionSlug);
-                        return (
-                          <tr key={r.sourceInstitutionSlug} className="border-b border-border last:border-0 hover:bg-surface-raised/50">
-                            <td className="px-3 py-2.5 font-medium text-text-primary">
-                              {src?.shortName ?? src?.name ?? r.sourceInstitutionSlug}
-                            </td>
-                            <td className="px-3 py-2.5">
-                              <StatusBadge status={r.verdict} />
-                            </td>
-                            <td className="px-3 py-2.5 hidden sm:table-cell">
-                              <ConfidenceDot level={r.confidenceLevel} />
-                            </td>
-                            <td className="px-3 py-2.5 text-right font-[var(--font-mono)] text-text-secondary">
-                              {r.approvedEvidenceCount}
-                            </td>
-                            <td className="px-3 py-2.5 text-right text-text-tertiary hidden md:table-cell">
-                              {r.latestObservedOn
-                                ? new Date(r.latestObservedOn).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-                                : '—'}
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </Card>
-              )}
+              <InboundRollupsTable
+                rollups={inboundRollups}
+                allInstitutions={allInstitutions}
+                evidenceBySource={evidenceBySource}
+              />
             </section>
 
             {/* Outbound */}
@@ -208,20 +178,26 @@ export default async function BankDDPage({ params }: Props) {
               <Card padding="md">
                 <h3 className="text-sm font-semibold text-text-primary mb-3">Active Bonuses</h3>
                 <div className="space-y-2">
-                  {bonuses.map(b => (
-                    <Link
-                      key={b.id}
-                      href={`/bonuses#${b.id}`}
-                      className="block rounded-md p-2 hover:bg-surface-raised transition-colors"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-text-primary">{b.accountType}</span>
-                        <span className="text-sm font-semibold text-accent font-[var(--font-mono)]">
-                          ${b.bonusAmount}
-                        </span>
-                      </div>
-                    </Link>
-                  ))}
+                  {bonuses.map(b => {
+                    const hasDDMission = !!b.requirements.directDeposit;
+                    return (
+                      <Link
+                        key={b.id}
+                        href={hasDDMission ? `/dd-checker/bonus/${b.id}` : `/bonuses#${b.id}`}
+                        className="block rounded-md p-2 hover:bg-surface-raised transition-colors"
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-text-primary">{b.accountType}</span>
+                          <span className="text-sm font-semibold text-accent font-[var(--font-mono)]">
+                            ${b.bonusAmount}
+                          </span>
+                        </div>
+                        {hasDDMission && (
+                          <span className="text-xs text-accent mt-0.5 block">View DD Mission →</span>
+                        )}
+                      </Link>
+                    );
+                  })}
                 </div>
               </Card>
             )}

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { Card } from '@/components/ui/Card';
 import { StatusBadge } from '@/components/dd-checker/StatusBadge';
-import { DDLookupTool } from '@/components/dd-checker/DDLookupTool';
+import { DDCheckerTabs } from '@/components/dd-checker/DDCheckerTabs';
 import {
   getAllInstitutions,
   getTrackedBanks,
@@ -12,6 +12,7 @@ import {
   getTotalDataPoints,
   getInstitution,
 } from '@/lib/dd/repository';
+import { getActiveBonuses } from '@/data/bonuses';
 
 export const metadata: Metadata = {
   title: 'Direct Deposit Compatibility Checker | BonusClerk',
@@ -24,6 +25,7 @@ export default function DDCheckerPage() {
   const rollups = getAllRollups();
   const popular = getPopularPairs(6);
   const totalPoints = getTotalDataPoints();
+  const activeBonuses = getActiveBonuses();
 
   return (
     <Container>
@@ -39,11 +41,12 @@ export default function DDCheckerPage() {
           </p>
         </div>
 
-        {/* Lookup Tool */}
-        <DDLookupTool
+        {/* Lookup Tool / Route Finder */}
+        <DDCheckerTabs
           institutions={institutions}
           trackedBanks={trackedBanks}
           rollups={rollups}
+          bonuses={activeBonuses}
         />
 
         {/* Popular Combinations */}

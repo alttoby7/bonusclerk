@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { BankSelect } from './BankSelect';
 import { DDResultCard } from './DDResultCard';
+import { FallbackSuggestions } from './FallbackSuggestions';
 
 export function DDLookupTool({
   institutions,
@@ -77,7 +78,7 @@ export function DDLookupTool({
             variant="primary"
             size="lg"
             onClick={handleCheck}
-            className={!source || !destination ? 'opacity-50 cursor-not-allowed' : ''}
+            className={!source || !destination ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}
           >
             Check Compatibility
           </Button>
@@ -85,7 +86,17 @@ export function DDLookupTool({
       </Card>
 
       {checked && result && sourceInst && destInst && (
-        <DDResultCard rollup={result} source={sourceInst} destination={destInst} />
+        <>
+          <DDResultCard rollup={result} source={sourceInst} destination={destInst} />
+          {result.verdict !== 'likely-works' && (
+            <FallbackSuggestions
+              destSlug={destination}
+              currentSourceSlug={source}
+              rollups={rollups}
+              institutions={institutions}
+            />
+          )}
+        </>
       )}
     </div>
   );
