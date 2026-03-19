@@ -1,3 +1,7 @@
+export type BonusAprBasisType = 'locked-capital' | 'direct-deposit' | 'activity' | 'none';
+export type ScreeningAgency = 'ChexSystems' | 'EWS' | 'Experian' | 'Equifax' | 'TransUnion';
+export type OpeningMethod = 'online' | 'in-person' | 'both';
+
 export interface BankBonus {
   id: string;
   bank: string;
@@ -26,6 +30,16 @@ export interface BankBonus {
   lastVerified: string;
   affiliateUrl?: string;
   tags: string[];
+  aprBasis?: {
+    type: BonusAprBasisType;
+    qualifyingAmount?: number;
+    holdDays?: number;
+  };
+  screening?: {
+    chexSensitive?: boolean;
+    agencies?: ScreeningAgency[];
+  };
+  openingMethod?: OpeningMethod;
 }
 
 export interface Bank {

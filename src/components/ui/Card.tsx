@@ -3,6 +3,7 @@ interface CardProps {
   className?: string;
   hover?: boolean;
   padding?: 'sm' | 'md' | 'lg';
+  id?: string;
 }
 
 const paddingStyles = {
@@ -16,9 +17,11 @@ export function Card({
   className = '',
   hover = false,
   padding = 'md',
+  id,
 }: CardProps) {
   return (
     <div
+      id={id}
       className={`rounded-xl border border-border bg-surface ${paddingStyles[padding]} ${
         hover ? 'transition-shadow hover:shadow-md hover:border-border-strong' : ''
       } ${className}`}

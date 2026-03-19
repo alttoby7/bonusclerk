@@ -19,6 +19,9 @@ export const wellsFargoBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['easy-dd', 'churnable'],
+    aprBasis: { type: 'direct-deposit' },
+    screening: { chexSensitive: false, agencies: ['EWS'] },
+    openingMethod: 'both',
   },
   {
     id: 'wf-platinum-savings-200',
@@ -39,5 +42,8 @@ export const wellsFargoBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['balance-hold'],
+    aprBasis: { type: 'locked-capital', qualifyingAmount: 25000, holdDays: 90 },
+    screening: { chexSensitive: false, agencies: ['EWS'] },
+    openingMethod: 'both',
   },
 ];

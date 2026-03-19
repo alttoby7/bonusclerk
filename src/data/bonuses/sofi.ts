@@ -20,5 +20,8 @@ export const sofiBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['high-value', 'no-fee', 'hysa'],
+    aprBasis: { type: 'direct-deposit' },
+    screening: { chexSensitive: false, agencies: [] },
+    openingMethod: 'online',
   },
 ];

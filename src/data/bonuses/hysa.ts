@@ -17,6 +17,9 @@ export const hysaBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['hysa', 'no-fee', 'no-minimum'],
+    aprBasis: { type: 'none' },
+    screening: { chexSensitive: false, agencies: ['Experian'] },
+    openingMethod: 'online',
   },
   {
     id: 'discover-savings',
@@ -24,7 +27,7 @@ export const hysaBonuses: BankBonus[] = [
     bankSlug: 'discover',
     accountType: 'savings',
     bonusAmount: 150,
-    bonusDescription: 'Open a Discover Online Savings account and deposit $15,000 within 30 days.',
+    bonusDescription: 'Discover is no longer accepting new deposit account applications as of January 2026.',
     requirements: {
       minimumBalance: 15000,
       other: 'Maintain balance through statement cycle',
@@ -34,9 +37,12 @@ export const hysaBonuses: BankBonus[] = [
     timeToBonus: '1-2 statement cycles',
     keepOpenMonths: 0,
     availability: 'nationwide',
-    isActive: true,
+    isActive: false,
     lastVerified: '2026-03-18',
     tags: ['hysa', 'no-fee', 'balance-hold'],
+    aprBasis: { type: 'locked-capital', qualifyingAmount: 15000, holdDays: 30 },
+    screening: { chexSensitive: false, agencies: ['ChexSystems'] },
+    openingMethod: 'online',
   },
   {
     id: 'bmo-alto-savings',
@@ -54,6 +60,9 @@ export const hysaBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['hysa', 'no-fee', 'no-minimum', 'top-apy'],
+    aprBasis: { type: 'none' },
+    screening: { chexSensitive: false, agencies: ['ChexSystems'] },
+    openingMethod: 'online',
   },
   {
     id: 'pnc-hysa',
@@ -71,5 +80,8 @@ export const hysaBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['hysa', 'no-fee'],
+    aprBasis: { type: 'none' },
+    screening: { chexSensitive: false, agencies: ['ChexSystems', 'EWS'] },
+    openingMethod: 'online',
   },
 ];

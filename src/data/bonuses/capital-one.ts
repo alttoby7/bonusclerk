@@ -19,6 +19,9 @@ export const capitalOneBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['no-fee', 'easy-dd'],
+    aprBasis: { type: 'direct-deposit' },
+    screening: { chexSensitive: false, agencies: ['ChexSystems', 'EWS'] },
+    openingMethod: 'online',
   },
   {
     id: 'cap1-360-savings-hysa',
@@ -36,5 +39,8 @@ export const capitalOneBonuses: BankBonus[] = [
     isActive: true,
     lastVerified: '2026-03-18',
     tags: ['hysa', 'no-fee', 'no-minimum'],
+    aprBasis: { type: 'none' },
+    screening: { chexSensitive: false, agencies: ['ChexSystems', 'EWS'] },
+    openingMethod: 'online',
   },
 ];
