@@ -1389,7 +1389,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab transfer to Ally counts as direct deposit"
   },
   {
@@ -1404,7 +1404,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase transfer to Ally counts as direct deposit"
   },
   {
@@ -1419,7 +1419,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise transfer to Ally did not work for Ally bonus"
   },
   {
@@ -1434,7 +1434,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity transfer to Ally did not count"
   },
   {
@@ -1449,7 +1449,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally to American Express Checking did not count"
   },
   {
@@ -1464,7 +1464,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab to American Express Checking counts"
   },
   {
@@ -1479,7 +1479,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase to American Express Checking did not count"
   },
   {
@@ -1494,7 +1494,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity to American Express Checking counts"
   },
   {
@@ -1509,7 +1509,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Robinhood to American Express Checking counts"
   },
   {
@@ -1524,7 +1524,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise to American Express Checking counts"
   },
   {
@@ -1539,7 +1539,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally to American Express Serve counts"
   },
   {
@@ -1554,7 +1554,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal to American Express Serve counts"
   },
   {
@@ -1569,7 +1569,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 to American Express Serve counts"
   },
   {
@@ -1584,7 +1584,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally to Bank of America counts as direct deposit"
   },
   {
@@ -1599,7 +1599,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Bluebird to Bank of America counts"
   },
   {
@@ -1614,7 +1614,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Serve to Bank of America did not count in some cases"
   },
   {
@@ -1629,7 +1629,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One to Bank of America counts"
   },
   {
@@ -1644,7 +1644,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab to Bank of America counts"
   },
   {
@@ -1659,7 +1659,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase to Bank of America counts"
   },
   {
@@ -1674,7 +1674,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Coinbase to Bank of America did not count"
   },
   {
@@ -1689,7 +1689,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover to Bank of America counts"
   },
   {
@@ -1704,7 +1704,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "E*Trade to Bank of America did not count"
   },
   {
@@ -1719,7 +1719,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity to Bank of America counts"
   },
   {
@@ -1734,7 +1734,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Robinhood to Bank of America did not count"
   },
   {
@@ -1749,7 +1749,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "SoFi to Bank of America counts"
   },
   {
@@ -1764,7 +1764,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "SoFi to Bank of America did not count in one case"
   },
   {
@@ -1779,7 +1779,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise to Bank of America counts"
   },
   {
@@ -1794,7 +1794,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wealthfront to Bank of America did not count"
   },
   {
@@ -1809,7 +1809,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally to Capital One 360 counts"
   },
   {
@@ -1824,7 +1824,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab to Capital One 360 counts"
   },
   {
@@ -1839,7 +1839,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase to Capital One 360 counts"
   },
   {
@@ -1854,7 +1854,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase to Capital One 360 did not count in one case"
   },
   {
@@ -1869,7 +1869,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover to Capital One 360 counts"
   },
   {
@@ -1884,7 +1884,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity to Capital One 360 counts"
   },
   {
@@ -1899,7 +1899,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Goldman Sachs to Capital One 360 counts"
   },
   {
@@ -1914,7 +1914,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal to Capital One 360 counts"
   },
   {
@@ -1929,7 +1929,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "SoFi to Capital One 360 counts"
   },
   {
@@ -1944,7 +1944,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "TD Ameritrade to Capital One 360 counts"
   },
   {
@@ -1959,7 +1959,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Vanguard to Capital One 360 counts"
   },
   {
@@ -1974,7 +1974,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Venmo to Capital One 360 counts"
   },
   {
@@ -1989,7 +1989,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo to Capital One 360 counts"
   },
   {
@@ -2004,7 +2004,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo to Capital One 360 did not count"
   },
   {
@@ -2019,7 +2019,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise to Capital One 360 counts"
   },
   {
@@ -2034,7 +2034,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "rejected",
     "notes": "Capital One 360 to itself did not count"
   },
   {
@@ -2049,7 +2049,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally to Chase counts as of September 2016"
   },
   {
@@ -2064,7 +2064,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Serve to Chase counts as of September 2016"
   },
   {
@@ -2079,7 +2079,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Serve to Chase did not count as of September 2016"
   },
   {
@@ -2094,7 +2094,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One to Chase counts as of September 2016"
   },
   {
@@ -2109,7 +2109,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One to Chase did not count as of September 2016"
   },
   {
@@ -2124,7 +2124,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Cash app to Chase counts as of September 2016"
   },
   {
@@ -2139,7 +2139,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Cash app to Chase did not count as of September 2016"
   },
   {
@@ -2154,7 +2154,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chime to Chase counts as of September 2016"
   },
   {
@@ -2169,7 +2169,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chime to Chase did not count as of September 2016"
   },
   {
@@ -2184,7 +2184,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover Savings to Chase counts as of September 2016"
   },
   {
@@ -2199,7 +2199,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover Savings to Chase did not count as of September 2016"
   },
   {
@@ -2214,7 +2214,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "E*Trade to Chase counts as of September 2016"
   },
   {
@@ -2229,7 +2229,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "E*Trade to Chase did not count as of September 2016"
   },
   {
@@ -2244,7 +2244,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally works at PNC per multiple entries"
   },
   {
@@ -2259,7 +2259,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally entries 4 and 9 didn't work at PNC"
   },
   {
@@ -2274,7 +2274,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 entry 56 didn't work at PNC"
   },
   {
@@ -2289,7 +2289,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab works at PNC per multiple entries"
   },
   {
@@ -2304,7 +2304,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab entries 4 and 56 didn't work at PNC"
   },
   {
@@ -2319,7 +2319,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase works at PNC per multiple entries"
   },
   {
@@ -2334,7 +2334,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase entries 58, 110, 117, 163 didn't work at PNC"
   },
   {
@@ -2349,7 +2349,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover ACH entries 5-9 didn't work at PNC"
   },
   {
@@ -2364,7 +2364,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity works at PNC per multiple entries"
   },
   {
@@ -2379,7 +2379,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal entries 22, 33, 46 didn't work at PNC"
   },
   {
@@ -2394,7 +2394,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo entry 3 didn't work at PNC"
   },
   {
@@ -2409,7 +2409,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally counts at U.S. Bank per multiple entries"
   },
   {
@@ -2424,7 +2424,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally entries 77, 146, 150 didn't work at U.S. Bank"
   },
   {
@@ -2439,7 +2439,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab counts at U.S. Bank per multiple entries"
   },
   {
@@ -2454,7 +2454,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab entry 39 didn't work at U.S. Bank"
   },
   {
@@ -2469,7 +2469,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase counts at U.S. Bank per multiple entries"
   },
   {
@@ -2484,7 +2484,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase entry 18 didn't work at U.S. Bank"
   },
   {
@@ -2499,7 +2499,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity counts at U.S. Bank per multiple entries"
   },
   {
@@ -2514,7 +2514,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity entry 3 didn't work at U.S. Bank"
   },
   {
@@ -2529,7 +2529,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally works at Wells Fargo per entry 8"
   },
   {
@@ -2544,7 +2544,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally entry 7 didn't work at Wells Fargo"
   },
   {
@@ -2559,7 +2559,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Serve entry 4 worked at Wells Fargo"
   },
   {
@@ -2574,7 +2574,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Serve entry 3 didn't work at Wells Fargo"
   },
   {
@@ -2589,7 +2589,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 entries 1, 2, 3 didn't work at Wells Fargo"
   },
   {
@@ -2604,7 +2604,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab entry 3 (brokerage) and 4, 7 worked at Wells Fargo"
   },
   {
@@ -2619,7 +2619,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab entries 1, 2, 5, 18 didn't work at Wells Fargo"
   },
   {
@@ -2634,7 +2634,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase entries 2, 3, 5, 6 worked at Wells Fargo"
   },
   {
@@ -2649,7 +2649,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase entry 1 didn't work at Wells Fargo"
   },
   {
@@ -2664,7 +2664,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover entries 2, 3 worked at Wells Fargo"
   },
   {
@@ -2679,7 +2679,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover entry 1 didn't work at Wells Fargo"
   },
   {
@@ -2694,7 +2694,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity entries 6, 7 worked at Wells Fargo"
   },
   {
@@ -2709,7 +2709,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity entries 4, 5 didn't work at Wells Fargo"
   },
   {
@@ -2724,7 +2724,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal entries 6, 7 worked at Wells Fargo"
   },
   {
@@ -2739,7 +2739,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal entries 5, 17 didn't work at Wells Fargo"
   },
   {
@@ -2754,7 +2754,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally method 1 counts as direct deposit at BMO Harris"
   },
   {
@@ -2769,7 +2769,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 methods 1-4 count as direct deposit at BMO Harris"
   },
   {
@@ -2784,7 +2784,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase methods 1-4, 9 count as direct deposit at BMO Harris"
   },
   {
@@ -2799,7 +2799,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase methods 5-6 didn't work at BMO Harris"
   },
   {
@@ -2814,7 +2814,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover ACH methods 1-2, 4-5 count as direct deposit at BMO Harris"
   },
   {
@@ -2829,7 +2829,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover ACH methods 6-7 didn't work at BMO Harris"
   },
   {
@@ -2844,7 +2844,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity method 1 (brokerage) counts as direct deposit at BMO Harris"
   },
   {
@@ -2859,7 +2859,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Robinhood method 1 counts as direct deposit at BMO Harris"
   },
   {
@@ -2874,7 +2874,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab Transfer methods 1-3 count as direct deposit at BMO Harris"
   },
   {
@@ -2889,7 +2889,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Vanguard method 1 (brokerage) counts as direct deposit at BMO Harris"
   },
   {
@@ -2904,7 +2904,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise methods 1-3 count as direct deposit at BMO Harris"
   },
   {
@@ -2919,7 +2919,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally method 1 did not count as direct deposit at BMO Harris"
   },
   {
@@ -2934,7 +2934,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 methods 2-3, 5-6 did not count as direct deposit at BMO Harris"
   },
   {
@@ -2949,7 +2949,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab methods 1, 3-4 did not count as direct deposit at BMO Harris"
   },
   {
@@ -2964,7 +2964,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity method 1 did not count as direct deposit at BMO Harris"
   },
   {
@@ -2979,7 +2979,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal methods 1-2 did not count as direct deposit at BMO Harris"
   },
   {
@@ -2994,7 +2994,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Vanguard method 1 did not count as direct deposit at BMO Harris"
   },
   {
@@ -3009,7 +3009,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.95,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo method 1 did not count as direct deposit at BMO Harris"
   },
   {
@@ -3024,7 +3024,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab coded as direct deposit at Cash App"
   },
   {
@@ -3039,7 +3039,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity coded as direct deposit at Cash App"
   },
   {
@@ -3054,7 +3054,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally did not work as direct deposit at Cash App"
   },
   {
@@ -3069,7 +3069,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One did not work as direct deposit at Cash App"
   },
   {
@@ -3084,7 +3084,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover did not work as direct deposit at Cash App"
   },
   {
@@ -3099,7 +3099,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PNC did not work as direct deposit at Cash App"
   },
   {
@@ -3114,7 +3114,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally did not work as direct deposit at Chime (reference 10)"
   },
   {
@@ -3129,7 +3129,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Serve personal experience counts at Chime"
   },
   {
@@ -3144,7 +3144,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Bank of America counts as direct deposit at Chime"
   },
   {
@@ -3159,7 +3159,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Cash App counts as direct deposit at Chime"
   },
   {
@@ -3174,7 +3174,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab counts as direct deposit at Chime"
   },
   {
@@ -3189,7 +3189,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase counts as direct deposit at Chime"
   },
   {
@@ -3204,7 +3204,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover counts as direct deposit at Chime"
   },
   {
@@ -3219,7 +3219,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover did not work as direct deposit at Chime (reference 16)"
   },
   {
@@ -3234,7 +3234,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity counts as direct deposit at Chime"
   },
   {
@@ -3249,7 +3249,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity did not work as direct deposit at Chime (reference 16)"
   },
   {
@@ -3264,7 +3264,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal counts as direct deposit at Chime"
   },
   {
@@ -3279,7 +3279,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "SoFi Money counts as direct deposit at Chime"
   },
   {
@@ -3294,7 +3294,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "TD Bank counts as direct deposit at Chime"
   },
   {
@@ -3309,7 +3309,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo counts as direct deposit at Chime"
   },
   {
@@ -3324,7 +3324,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "U.S. Bank counts as direct deposit at Chime"
   },
   {
@@ -3339,7 +3339,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Vanguard counts as direct deposit at Chime"
   },
   {
@@ -3354,7 +3354,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise counts as direct deposit at Chime"
   },
   {
@@ -3369,7 +3369,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise did not work as direct deposit at Chime (reference 3)"
   },
   {
@@ -3384,7 +3384,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Bank of America does not work as direct deposit at Chime"
   },
   {
@@ -3399,7 +3399,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase does not work as direct deposit at Chime"
   },
   {
@@ -3414,7 +3414,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo does not work as direct deposit at Chime"
   },
   {
@@ -3429,7 +3429,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally counts as direct deposit at Citizens Bank"
   },
   {
@@ -3444,7 +3444,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Savings counts as direct deposit at Citizens Bank"
   },
   {
@@ -3459,7 +3459,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 counts as direct deposit at Citizens Bank"
   },
   {
@@ -3474,7 +3474,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One 360 did not work as direct deposit at Citizens Bank (reference 6)"
   },
   {
@@ -3489,7 +3489,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab counts as direct deposit at Citizens Bank"
   },
   {
@@ -3504,7 +3504,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase counts as direct deposit at Citizens Bank"
   },
   {
@@ -3519,7 +3519,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover counts as direct deposit at Citizens Bank"
   },
   {
@@ -3534,7 +3534,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "eTrade counts as direct deposit at Citizens Bank"
   },
   {
@@ -3549,7 +3549,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity counts as direct deposit at Citizens Bank"
   },
   {
@@ -3564,7 +3564,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity did not work as direct deposit at Citizens Bank (reference 8)"
   },
   {
@@ -3579,7 +3579,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "HSBC counts as direct deposit at Citizens Bank"
   },
   {
@@ -3594,7 +3594,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Huntington Bank counts as direct deposit at Citizens Bank"
   },
   {
@@ -3609,7 +3609,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PayPal counts as direct deposit at Citizens Bank"
   },
   {
@@ -3624,7 +3624,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "SoFi counts as direct deposit at Citizens Bank"
   },
   {
@@ -3639,7 +3639,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "TD Bank counts as direct deposit at Citizens Bank"
   },
   {
@@ -3654,7 +3654,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo counts as direct deposit at Citizens Bank"
   },
   {
@@ -3669,7 +3669,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wise counts as direct deposit at Citizens Bank"
   },
   {
@@ -3684,7 +3684,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Vanguard counts as direct deposit at Citizens Bank"
   },
   {
@@ -3699,7 +3699,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Venmo counts as direct deposit at Citizens Bank"
   },
   {
@@ -3714,7 +3714,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Zelle counts as direct deposit at Citizens Bank"
   },
   {
@@ -3729,7 +3729,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Listed as working method"
   },
   {
@@ -3744,7 +3744,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Listed as working method"
   },
   {
@@ -3759,7 +3759,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Listed as working method"
   },
   {
@@ -3774,7 +3774,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover codes as direct deposit at Fidelity Bank PA"
   },
   {
@@ -3789,7 +3789,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as triggered DD requirement"
   },
   {
@@ -3804,7 +3804,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as triggered DD requirement"
   },
   {
@@ -3819,7 +3819,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as triggered DD requirement"
   },
   {
@@ -3834,7 +3834,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as triggered DD requirement"
   },
   {
@@ -3849,7 +3849,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't work but some reports say it worked after manual request"
   },
   {
@@ -3864,7 +3864,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3879,7 +3879,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3894,7 +3894,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3909,7 +3909,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3924,7 +3924,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3939,7 +3939,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3954,7 +3954,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3969,7 +3969,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Reported as didn't trigger DD requirement"
   },
   {
@@ -3984,7 +3984,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One counts"
   },
   {
@@ -3999,7 +3999,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Ally ACH counts with one report of failure"
   },
   {
@@ -4014,7 +4014,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "American Express Savings counts"
   },
   {
@@ -4029,7 +4029,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Bank of America counts"
   },
   {
@@ -4044,7 +4044,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Capital One counts with one report of failure"
   },
   {
@@ -4059,7 +4059,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Charles Schwab ACH counts with one report of failure"
   },
   {
@@ -4074,7 +4074,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.85,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Chase counts with one report of failure"
   },
   {
@@ -4089,7 +4089,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.75,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Discover counts with multiple reports of failure"
   },
   {
@@ -4104,7 +4104,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "E*trade counts"
   },
   {
@@ -4119,7 +4119,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Fidelity counts"
   },
   {
@@ -4134,7 +4134,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Marcus counts"
   },
   {
@@ -4149,7 +4149,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Paypal counts"
   },
   {
@@ -4164,7 +4164,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "PNC counts"
   },
   {
@@ -4179,7 +4179,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Vanguard brokerage counts"
   },
   {
@@ -4194,7 +4194,7 @@
     "sourceType": "doctor_of_credit",
     "sourceUrl": "https://www.doctorofcredit.com/knowledge-base/list-methods-banks-count-direct-deposits/",
     "extractConfidence": 0.9,
-    "reviewStatus": "pending",
+    "reviewStatus": "approved",
     "notes": "Wells Fargo counts"
   }
 ]
