@@ -1,7 +1,7 @@
 export interface RawExtraction {
   sourceText: string;
   sourceUrl: string;
-  sourcePlatform: 'doctor_of_credit' | 'reddit';
+  sourcePlatform: 'doc' | 'reddit';
   extractedAt: string;
   sourceInstitution: string;
   destinationBank: string;
@@ -15,7 +15,7 @@ export interface RawExtraction {
 export interface RawComment {
   text: string;
   url: string;
-  platform: 'doctor_of_credit' | 'reddit';
+  platform: 'doc' | 'reddit';
   postedOn: string | null;
 }
 

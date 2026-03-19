@@ -1,7 +1,7 @@
 import type { DDEvidence, DDPairRollup, DDStatus, ConfidenceLevel, SourceType } from '@/types/dd-checker';
 
 const QUALITY_WEIGHTS: Record<SourceType, number> = {
-  doctor_of_credit: 0.90,
+  community_report: 0.90,
   staff_manual: 1.00,
   linked_public_report: 0.70,
   trusted_user: 0.55,

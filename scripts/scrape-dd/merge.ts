@@ -14,7 +14,7 @@ function getNextId(existing: DDEvidenceEntry[]): number {
 }
 
 function mapSourceType(platform: RawExtraction['sourcePlatform'], isFromMasterList: boolean): string {
-  if (platform === 'doctor_of_credit' && isFromMasterList) return 'doctor_of_credit';
+  if (platform === 'doc' && isFromMasterList) return 'community_report';
   return 'linked_public_report';
 }
 

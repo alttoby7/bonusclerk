@@ -26,11 +26,8 @@ export function EvidenceTimeline({ evidence }: { evidence: DDEvidence[] }) {
                 </svg>
               )}
             </span>
-            <span className="text-text-secondary capitalize">
-              {e.sourceType.replace(/_/g, ' ')}
-            </span>
             <span className="text-text-tertiary font-[var(--font-mono)]">
-              {(e.extractConfidence * 100).toFixed(0)}%
+              {(e.extractConfidence * 100).toFixed(0)}% confidence
             </span>
           </div>
         );

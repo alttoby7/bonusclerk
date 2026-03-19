@@ -116,7 +116,7 @@ export async function scrapeMasterList(): Promise<RawComment[]> {
     comments.push({
       text: text.slice(0, 3000), // Allow longer chunks for master list
       url: DOC_DD_LIST_URL,
-      platform: 'doctor_of_credit',
+      platform: 'doc',
       postedOn: null,
     });
   }
@@ -170,7 +170,7 @@ export async function scrapeBonusPostComments(limit?: number): Promise<RawCommen
       allComments.push({
         text: c.text.slice(0, 1000),
         url: postUrl,
-        platform: 'doctor_of_credit',
+        platform: 'doc',
         postedOn: c.date,
       });
     }
