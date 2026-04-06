@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { Container } from './Container';
-import { pillars } from '@/data/pillars';
+import type { Pillar } from '@/types/bonus';
 
-export function Footer() {
+export function Footer({ pillars }: { pillars: Pillar[] }) {
   return (
     <footer className="mt-20 border-t border-border bg-navy text-slate-300">
       <Container size="wide" className="py-12">

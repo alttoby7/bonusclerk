@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Container } from '@/components/layout/Container';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
-import { allBonuses, sortBonuses } from '@/data/bonuses';
+import { getAllBonuses, sortBonuses } from '@/lib/bonus-repository';
 import { formatMoney, expirationLabel } from '@/lib/dates';
 import { formatBonusApr, getScreeningLabel, getOpeningMethodLabel } from '@/lib/bonus-metrics';
 
@@ -12,7 +12,10 @@ export const metadata: Metadata = {
     'Complete list of bank account bonuses available right now. Filter by bank, account type, and bonus value. Updated weekly.',
 };
 
-export default function BonusesPage() {
+export const revalidate = 3600;
+
+export default async function BonusesPage() {
+  const allBonuses = await getAllBonuses();
   const bonuses = sortBonuses(allBonuses, 'bonusAmount', 'desc');
 
   return (
@@ -141,7 +144,7 @@ export default function BonusesPage() {
   );
 }
 
-function getRequirementText(bonus: typeof allBonuses[number]): string {
+function getRequirementText(bonus: { requirements: { directDeposit?: { amount: number; frequency: string }; minimumBalance?: number; debitTransactions?: number; other?: string } }): string {
   const parts: string[] = [];
   if (bonus.requirements.directDeposit) {
     parts.push(`${formatMoney(bonus.requirements.directDeposit.amount)} DD ${bonus.requirements.directDeposit.frequency}`);

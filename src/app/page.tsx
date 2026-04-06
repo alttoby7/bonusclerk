@@ -5,18 +5,28 @@ import { Card } from '@/components/ui/Card';
 import { FeaturedBonuses } from '@/components/bonus/FeaturedBonuses';
 import { BonusRow } from '@/components/bonus/BonusRow';
 import { StatusBadge } from '@/components/dd-checker/StatusBadge';
-import { allBonuses, getActiveBonuses, getTotalBonusValue, sortBonuses } from '@/data/bonuses';
-import { pillars } from '@/data/pillars';
+import { getAllBonuses, getActiveBonuses, getTotalBonusValue, sortBonuses } from '@/lib/bonus-repository';
+import { getAllPillars } from '@/lib/content-repository';
 import { formatMoney } from '@/lib/dates';
-import { getTotalDataPoints, getPopularPairs, getInstitution } from '@/lib/dd/repository';
+import { getTotalDataPoints, getPopularPairs, getAllInstitutions } from '@/lib/dd/repository';
+import { getRecentArticles } from '@/lib/article-manifest';
 
-export default function HomePage() {
-  const activeBonuses = getActiveBonuses();
+export const revalidate = 3600;
+
+export default async function HomePage() {
+  const [allBonuses, activeBonuses, totalValue, pillars, ddDataPoints, ddPopular, institutions] = await Promise.all([
+    getAllBonuses(),
+    getActiveBonuses(),
+    getTotalBonusValue(),
+    getAllPillars(),
+    getTotalDataPoints(),
+    getPopularPairs(4),
+    getAllInstitutions(),
+  ]);
+  const institutionMap = new Map(institutions.map(i => [i.slug, i]));
   const topBonuses = sortBonuses(activeBonuses.filter(b => b.bonusAmount > 0), 'bonusAmount', 'desc').slice(0, 6);
   const tableBonuses = sortBonuses(activeBonuses.filter(b => b.bonusAmount > 0), 'bonusAmount', 'desc').slice(0, 10);
-  const totalValue = getTotalBonusValue();
-  const ddDataPoints = getTotalDataPoints();
-  const ddPopular = getPopularPairs(4);
+  const recentArticles = getRecentArticles(4);
 
   return (
     <>
@@ -129,6 +139,30 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* Latest Guides */}
+      {recentArticles.length > 0 && (
+        <section className="py-12">
+          <Container>
+            <h2 className="text-2xl font-bold text-text-primary mb-6">Latest Guides</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {recentArticles.map(a => (
+                <Link key={`${a.pillar}/${a.slug}`} href={`/${a.pillar}/${a.slug}`}>
+                  <Card hover>
+                    <h3 className="font-semibold text-text-primary group-hover:text-accent">
+                      {a.meta.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-text-tertiary line-clamp-2">{a.meta.description}</p>
+                    <div className="mt-2 text-xs text-text-tertiary">
+                      {new Date(a.meta.updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </div>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* DD Checker Promo */}
       <section className="py-12 bg-surface border-y border-border">
         <Container>
@@ -145,8 +179,8 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:w-96">
               {ddPopular.map(r => {
-                const src = getInstitution(r.sourceInstitutionSlug);
-                const dest = getInstitution(r.destinationBankSlug);
+                const src = institutionMap.get(r.sourceInstitutionSlug);
+                const dest = institutionMap.get(r.destinationBankSlug);
                 if (!src || !dest) return null;
                 return (
                   <Link key={`${r.sourceInstitutionSlug}-${r.destinationBankSlug}`} href={`/dd-checker/${dest.slug}`}>

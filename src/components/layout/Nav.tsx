@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Container } from './Container';
-import { pillars } from '@/data/pillars';
+import type { Pillar } from '@/types/bonus';
 
-export function Nav() {
+export function Nav({ pillars }: { pillars: Pillar[] }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (

@@ -10,22 +10,26 @@ import {
   getAllRollups,
   getPopularPairs,
   getTotalDataPoints,
-  getInstitution,
 } from '@/lib/dd/repository';
-import { getActiveBonuses } from '@/data/bonuses';
+import { getActiveBonuses } from '@/lib/bonus-repository';
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: 'Direct Deposit Compatibility Checker | BonusClerk',
   description: 'Check if your ACH transfer counts as a direct deposit for bank bonuses. Community-verified data for 14+ banks and 30+ source institutions.',
 };
 
-export default function DDCheckerPage() {
-  const institutions = getAllInstitutions();
-  const trackedBanks = getTrackedBanks();
-  const rollups = getAllRollups();
-  const popular = getPopularPairs(6);
-  const totalPoints = getTotalDataPoints();
-  const activeBonuses = getActiveBonuses();
+export default async function DDCheckerPage() {
+  const [institutions, trackedBanks, rollups, popular, totalPoints, activeBonuses] = await Promise.all([
+    getAllInstitutions(),
+    getTrackedBanks(),
+    getAllRollups(),
+    getPopularPairs(6),
+    getTotalDataPoints(),
+    getActiveBonuses(),
+  ]);
+  const institutionMap = new Map(institutions.map(i => [i.slug, i]));
 
   return (
     <Container>
@@ -54,8 +58,8 @@ export default function DDCheckerPage() {
           <h2 className="text-lg font-semibold text-text-primary mb-4">Popular Combinations</h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {popular.map(r => {
-              const src = getInstitution(r.sourceInstitutionSlug);
-              const dest = getInstitution(r.destinationBankSlug);
+              const src = institutionMap.get(r.sourceInstitutionSlug);
+              const dest = institutionMap.get(r.destinationBankSlug);
               if (!src || !dest) return null;
               return (
                 <Link key={`${r.sourceInstitutionSlug}-${r.destinationBankSlug}`} href={`/dd-checker/${dest.slug}`}>

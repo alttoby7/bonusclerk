@@ -1,10 +1,19 @@
 import type { MetadataRoute } from 'next';
-import { pillars } from '@/data/pillars';
+import { getAllPillars } from '@/lib/content-repository';
 import { getTrackedBanks } from '@/lib/dd/repository';
-import { allBonuses } from '@/data/bonuses';
+import { getAllBonuses } from '@/lib/bonus-repository';
+import { getAllArticles } from '@/lib/article-manifest';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://bonusclerk.com';
+
+  const [pillars, trackedBanks, allBonuses] = await Promise.all([
+    getAllPillars(),
+    getTrackedBanks(),
+    getAllBonuses(),
+  ]);
+
+  const articles = getAllArticles();
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
@@ -23,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const ddBankPages: MetadataRoute.Sitemap = getTrackedBanks().map(bank => ({
+  const ddBankPages: MetadataRoute.Sitemap = trackedBanks.map(bank => ({
     url: `${baseUrl}/dd-checker/${bank.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
@@ -39,5 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  return [...staticPages, ...pillarPages, ...ddBankPages, ...ddBonusMissionPages];
+  const articlePages: MetadataRoute.Sitemap = articles.map(a => ({
+    url: `${baseUrl}/${a.pillar}/${a.slug}`,
+    lastModified: new Date(a.meta.updatedAt),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...pillarPages, ...articlePages, ...ddBankPages, ...ddBonusMissionPages];
 }

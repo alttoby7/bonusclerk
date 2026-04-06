@@ -12,10 +12,14 @@ export const metadata: Metadata = {
   description: 'Full direct deposit compatibility matrix showing which ACH pushes count as direct deposits at every tracked bank. Visual grid with community-verified data.',
 };
 
-export default function MatrixPage() {
-  const allInstitutions = getAllInstitutions();
-  const trackedBanks = getTrackedBanks();
-  const rollups = getAllRollups();
+export const revalidate = 3600;
+
+export default async function MatrixPage() {
+  const [allInstitutions, trackedBanks, rollups] = await Promise.all([
+    getAllInstitutions(),
+    getTrackedBanks(),
+    getAllRollups(),
+  ]);
 
   return (
     <Container size="wide">

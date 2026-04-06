@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { Inter, Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import { Nav } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
+import { getAllPillars } from '@/lib/content-repository';
 import './globals.css';
 
 const GTM_ID = 'GTM-K5F6R5PF';
@@ -40,11 +41,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pillars = await getAllPillars();
   return (
     <html lang="en">
       <head>
@@ -63,6 +65,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <body
         className={`${inter.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'BonusClerk',
+              url: 'https://bonusclerk.com',
+              description: 'Find and track the best bank account bonuses.',
+              publisher: {
+                '@type': 'Organization',
+                name: 'BonusClerk',
+                url: 'https://bonusclerk.com',
+              },
+            }),
+          }}
+        />
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
@@ -71,9 +90,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <Nav />
+        <Nav pillars={pillars} />
         <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Footer pillars={pillars} />
       </body>
     </html>
   );

@@ -1,21 +1,22 @@
 import Link from 'next/link';
 import type { BankBonus } from '@/types/bonus';
-import type { DDPairRollup, Institution } from '@/types/dd-checker';
+import type { DDPairRollup, Institution, MethodGuide } from '@/types/dd-checker';
 import { Card } from '@/components/ui/Card';
 import { StatusBadge } from './StatusBadge';
 import { ConfidenceMeter } from './ConfidenceMeter';
-import { getMethodGuideForType } from '@/data/direct-deposit/method-guides';
 
 export function BonusMission({
   bonus,
   bestSources,
   failingSources,
   allInstitutions,
+  methodGuides,
 }: {
   bonus: BankBonus;
   bestSources: DDPairRollup[];
   failingSources: DDPairRollup[];
   allInstitutions: Institution[];
+  methodGuides: MethodGuide[];
 }) {
   const dd = bonus.requirements.directDeposit!;
 
@@ -41,7 +42,7 @@ export function BonusMission({
             {bestSources.map((rollup, i) => {
               const src = allInstitutions.find(inst => inst.slug === rollup.sourceInstitutionSlug);
               if (!src) return null;
-              const guide = getMethodGuideForType(src.type);
+              const guide = methodGuides.find(g => g.type === src.type);
 
               return (
                 <Card key={rollup.sourceInstitutionSlug} padding="md" className="animate-slide-up" >

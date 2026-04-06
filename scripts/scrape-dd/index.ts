@@ -79,7 +79,7 @@ async function main() {
 
   // Step 3: Resolve aliases, dedup, prepare entries
   console.log('\nProcessing: alias matching + dedup...');
-  const result = processExtractions(extractions);
+  const result = await processExtractions(extractions);
 
   // Step 4: Summary
   console.log('\n=== Results ===');
@@ -105,7 +105,7 @@ async function main() {
   }
 
   // Step 5: Write results
-  writeResults(result, dryRun);
+  await writeResults(result, dryRun);
 
   console.log('\nDone.');
 }
