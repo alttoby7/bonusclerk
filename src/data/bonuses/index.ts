@@ -5,6 +5,8 @@ import { capitalOneBonuses } from './capital-one';
 import { citiBonuses } from './citi';
 import { sofiBonuses } from './sofi';
 import { hysaBonuses } from './hysa';
+import { usBankBonuses } from './us-bank';
+import { bankOfAmericaBonuses } from './bank-of-america';
 
 export const allBonuses: BankBonus[] = [
   ...chaseBonuses,
@@ -13,6 +15,8 @@ export const allBonuses: BankBonus[] = [
   ...citiBonuses,
   ...sofiBonuses,
   ...hysaBonuses,
+  ...usBankBonuses,
+  ...bankOfAmericaBonuses,
 ];
 
 export function filterBonuses(bonuses: BankBonus[], filter: BonusFilter): BankBonus[] {
