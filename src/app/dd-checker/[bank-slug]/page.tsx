@@ -14,19 +14,26 @@ import {
   getAllInstitutions,
   getEvidenceTimeline,
 } from '@/lib/dd/repository';
-import { getBonusesByBank } from '@/data/bonuses';
+import { getBonusesByBank } from '@/lib/bonus-repository';
+
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ 'bank-slug': string }>;
 }
 
 export async function generateStaticParams() {
-  return getTrackedBanks().map(bank => ({ 'bank-slug': bank.slug }));
+  try {
+    const banks = await getTrackedBanks();
+    return banks.map(bank => ({ 'bank-slug': bank.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { 'bank-slug': slug } = await params;
-  const bank = getInstitution(slug);
+  const bank = await getInstitution(slug);
   if (!bank) return {};
   const name = bank.shortName ?? bank.name;
   return {
@@ -37,22 +44,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BankDDPage({ params }: Props) {
   const { 'bank-slug': slug } = await params;
-  const bank = getInstitution(slug);
+  const bank = await getInstitution(slug);
   if (!bank || !bank.isTrackedBank) return notFound();
 
-  const allInstitutions = getAllInstitutions();
-  const inboundRollups = getRollupsForDestination(slug)
-    .sort((a, b) => b.approvedEvidenceCount - a.approvedEvidenceCount);
-  const outboundRollups = getRollupsForSource(slug)
-    .sort((a, b) => b.approvedEvidenceCount - a.approvedEvidenceCount);
-  const bonuses = getBonusesByBank(slug).filter(b => b.isActive);
+  const [allInstitutions, inboundRollupsRaw, outboundRollupsRaw, allBonuses] = await Promise.all([
+    getAllInstitutions(),
+    getRollupsForDestination(slug),
+    getRollupsForSource(slug),
+    getBonusesByBank(slug),
+  ]);
+  const inboundRollups = inboundRollupsRaw.sort((a, b) => b.approvedEvidenceCount - a.approvedEvidenceCount);
+  const outboundRollups = outboundRollupsRaw.sort((a, b) => b.approvedEvidenceCount - a.approvedEvidenceCount);
+  const bonuses = allBonuses.filter(b => b.isActive);
   const name = bank.shortName ?? bank.name;
 
   // Build evidence map for expandable rows
   const evidenceBySource: Record<string, import('@/types/dd-checker').DDEvidence[]> = {};
-  for (const r of inboundRollups) {
-    evidenceBySource[r.sourceInstitutionSlug] = getEvidenceTimeline(r.sourceInstitutionSlug, slug);
-  }
+  const evidencePromises = inboundRollups.map(async r => {
+    evidenceBySource[r.sourceInstitutionSlug] = await getEvidenceTimeline(r.sourceInstitutionSlug, slug);
+  });
+  await Promise.all(evidencePromises);
 
   return (
     <Container>

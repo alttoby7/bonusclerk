@@ -1,14 +1,23 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { Container } from '@/components/layout/Container';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { BonusCard } from '@/components/bonus/BonusCard';
-import { pillars, getPillar } from '@/data/pillars';
-import { allBonuses, sortBonuses } from '@/data/bonuses';
+import { getAllPillars, getPillar } from '@/lib/content-repository';
+import { getAllBonuses, sortBonuses } from '@/lib/bonus-repository';
+import { getArticlesByPillar } from '@/lib/article-manifest';
 
-export function generateStaticParams() {
-  return pillars.map(p => ({ pillar: p.slug }));
+export const revalidate = 3600;
+
+export async function generateStaticParams() {
+  try {
+    const pillars = await getAllPillars();
+    return pillars.map(p => ({ pillar: p.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({
@@ -17,7 +26,7 @@ export async function generateMetadata({
   params: Promise<{ pillar: string }>;
 }): Promise<Metadata> {
   const { pillar: slug } = await params;
-  const pillar = getPillar(slug);
+  const pillar = await getPillar(slug);
   if (!pillar) return {};
 
   return {
@@ -32,12 +41,14 @@ export default async function PillarPage({
   params: Promise<{ pillar: string }>;
 }) {
   const { pillar: slug } = await params;
-  const pillar = getPillar(slug);
+  const pillar = await getPillar(slug);
   if (!pillar) notFound();
 
   // Get bonuses related to this pillar's banks
-  const pillarBonuses = getPillarBonuses(slug);
+  const allBonuses = await getAllBonuses();
+  const pillarBonuses = getPillarBonuses(slug, allBonuses);
   const topBonuses = sortBonuses(pillarBonuses.filter(b => b.bonusAmount > 0), 'bonusAmount', 'desc').slice(0, 4);
+  const articles = getArticlesByPillar(slug);
 
   return (
     <Container className="py-10">
@@ -75,7 +86,29 @@ export default async function PillarPage({
         </section>
       )}
 
-      {/* Cluster navigation */}
+      {/* Articles */}
+      {articles.length > 0 && (
+        <section className="mb-12">
+          <h2 className="text-xl font-bold text-text-primary mb-4">Guides &amp; Articles</h2>
+          <div className="grid gap-3">
+            {articles.map(a => (
+              <Link key={a.slug} href={`/${a.pillar}/${a.slug}`}>
+                <Card hover padding="sm">
+                  <h3 className="font-medium text-text-primary">{a.meta.title}</h3>
+                  <p className="text-sm text-text-tertiary mt-1 line-clamp-2">
+                    {a.meta.description}
+                  </p>
+                  <div className="mt-2 text-xs text-text-tertiary">
+                    Updated {new Date(a.meta.updatedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Topics */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-text-primary mb-4">Topics in This Guide</h2>
         <div className="grid gap-3">
@@ -104,7 +137,7 @@ export default async function PillarPage({
   );
 }
 
-function getPillarBonuses(pillarSlug: string) {
+function getPillarBonuses(pillarSlug: string, allBonuses: import('@/types/bonus').BankBonus[]) {
   const bankMappings: Record<string, string[]> = {
     'bank-account-bonuses': ['chase', 'wells-fargo', 'capital-one', 'citi', 'us-bank', 'pnc'],
     'chase-bank-bonuses': ['chase'],

@@ -3,28 +3,34 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/layout/Container';
 import { BonusMission } from '@/components/dd-checker/BonusMission';
-import { allBonuses } from '@/data/bonuses';
+import { getAllBonuses, getBonusById } from '@/lib/bonus-repository';
 import {
   getAllInstitutions,
   getBestSourcesForBank,
   getFailingSourcesForBank,
+  getMethodGuides,
 } from '@/lib/dd/repository';
+
+export const revalidate = 3600;
 
 interface Props {
   params: Promise<{ 'bonus-id': string }>;
 }
 
-function getDDBonuses() {
-  return allBonuses.filter(b => b.isActive && b.requirements.directDeposit);
-}
-
 export async function generateStaticParams() {
-  return getDDBonuses().map(b => ({ 'bonus-id': b.id }));
+  try {
+    const allBonuses = await getAllBonuses();
+    return allBonuses
+      .filter(b => b.isActive && b.requirements.directDeposit)
+      .map(b => ({ 'bonus-id': b.id }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { 'bonus-id': bonusId } = await params;
-  const bonus = allBonuses.find(b => b.id === bonusId);
+  const bonus = await getBonusById(bonusId);
   if (!bonus || !bonus.requirements.directDeposit) return {};
   return {
     title: `How to Trigger Direct Deposit for ${bonus.bank} $${bonus.bonusAmount} Bonus | BonusClerk`,
@@ -34,12 +40,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BonusMissionPage({ params }: Props) {
   const { 'bonus-id': bonusId } = await params;
-  const bonus = allBonuses.find(b => b.id === bonusId);
+  const bonus = await getBonusById(bonusId);
   if (!bonus || !bonus.requirements.directDeposit) return notFound();
 
-  const allInstitutions = getAllInstitutions();
-  const bestSources = getBestSourcesForBank(bonus.bankSlug, 3);
-  const failingSources = getFailingSourcesForBank(bonus.bankSlug);
+  const [allInstitutions, bestSources, failingSources, methodGuides] = await Promise.all([
+    getAllInstitutions(),
+    getBestSourcesForBank(bonus.bankSlug, 3),
+    getFailingSourcesForBank(bonus.bankSlug),
+    getMethodGuides(),
+  ]);
 
   const dd = bonus.requirements.directDeposit;
 
@@ -73,6 +82,7 @@ export default async function BonusMissionPage({ params }: Props) {
           bestSources={bestSources}
           failingSources={failingSources}
           allInstitutions={allInstitutions}
+          methodGuides={methodGuides}
         />
       </div>
     </Container>
