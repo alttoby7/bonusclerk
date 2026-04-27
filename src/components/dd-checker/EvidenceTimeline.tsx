@@ -10,8 +10,9 @@ export function EvidenceTimeline({ evidence }: { evidence: DDEvidence[] }) {
       {evidence.map(e => {
         const date = e.observedOn ?? e.reportedOn;
         const isSuccess = e.outcome === 'counts';
+        const hasSource = !!e.sourceUrl;
         return (
-          <div key={e.id} className="flex items-center gap-3 text-xs">
+          <div key={e.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
             <span className="shrink-0 rounded-full bg-surface-sunken px-2 py-0.5 text-text-tertiary font-[var(--font-mono)]">
               {new Date(date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
             </span>
@@ -29,6 +30,21 @@ export function EvidenceTimeline({ evidence }: { evidence: DDEvidence[] }) {
             <span className="text-text-tertiary font-[var(--font-mono)]">
               {(e.extractConfidence * 100).toFixed(0)}% confidence
             </span>
+            {e.redditUsername && e.redditSubreddit && (
+              <span className="text-text-tertiary">
+                /u/{e.redditUsername} in r/{e.redditSubreddit}
+              </span>
+            )}
+            {hasSource && (
+              <a
+                href={e.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:text-accent-hover underline"
+              >
+                source
+              </a>
+            )}
           </div>
         );
       })}

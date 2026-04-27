@@ -16,7 +16,9 @@ config({ path: resolve(__dirname, '../../.env') });
 
 function parseArgs(): { source: 'doc' | 'reddit' | 'all'; dryRun: boolean; limit?: number } {
   const args = process.argv.slice(2);
-  let source: 'doc' | 'reddit' | 'all' = 'all';
+  // Default: reddit-only. DoC scraping disabled by default for ethical clarity
+  // (see scripts/audit/backups/ + /methodology page). Use --source doc to override.
+  let source: 'doc' | 'reddit' | 'all' = 'reddit';
   let dryRun = false;
   let limit: number | undefined;
 

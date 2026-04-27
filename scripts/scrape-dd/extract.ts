@@ -139,6 +139,8 @@ async function extractBatch(comments: RawComment[]): Promise<RawExtraction[]> {
       datePrecision: (item.datePrecision as RawExtraction['datePrecision']) ?? 'unknown',
       extractConfidence: item.extractConfidence,
       notes: item.notes ?? '',
+      redditUsername: matchingComment.redditUsername,
+      redditSubreddit: matchingComment.redditSubreddit,
     });
   }
 

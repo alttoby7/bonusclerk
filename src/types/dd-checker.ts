@@ -1,7 +1,7 @@
 export type DDStatus = 'likely-works' | 'mixed' | 'likely-fails' | 'not-enough-data';
 export type ConfidenceLevel = 'high' | 'medium' | 'low' | 'insufficient';
 export type InstitutionType = 'bank' | 'brokerage' | 'fintech' | 'p2p' | 'payroll' | 'government' | 'other';
-export type SourceType = 'community_report' | 'staff_manual' | 'linked_public_report' | 'trusted_user' | 'new_user' | 'anonymous';
+export type SourceType = 'community_report' | 'staff_manual' | 'linked_public_report' | 'trusted_user' | 'new_user' | 'anonymous' | 'reddit_data_point';
 
 export interface Institution {
   slug: string;
@@ -22,6 +22,8 @@ export interface DDEvidence {
   datePrecision: 'exact' | 'month' | 'year' | 'unknown';
   sourceType: SourceType;
   sourceUrl?: string;
+  redditUsername?: string;
+  redditSubreddit?: string;
   extractConfidence: number;
   reviewStatus: 'approved' | 'pending' | 'rejected';
   notes?: string;

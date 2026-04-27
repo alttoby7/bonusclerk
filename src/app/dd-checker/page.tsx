@@ -41,7 +41,11 @@ export default async function DDCheckerPage() {
           </h1>
           <p className="text-text-secondary">
             Check if an ACH push from your bank or brokerage counts as a direct deposit. Based on{' '}
-            <span className="font-semibold text-text-primary">{totalPoints}</span> community-verified data points.
+            <span className="font-semibold text-text-primary">{totalPoints}</span> community data points sourced from public Reddit threads.{' '}
+            <Link href="/dd-checker/methodology" className="text-accent hover:text-accent-hover underline">
+              How this works
+            </Link>
+            .
           </p>
         </div>
 

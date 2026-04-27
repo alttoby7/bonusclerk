@@ -17,8 +17,8 @@ function getServiceClient() {
   return createClient(url, key);
 }
 
-function mapSourceType(platform: RawExtraction['sourcePlatform'], isFromMasterList: boolean): string {
-  if (platform === 'doc' && isFromMasterList) return 'community_report';
+function mapSourceType(platform: RawExtraction['sourcePlatform']): string {
+  if (platform === 'reddit') return 'reddit_data_point';
   return 'linked_public_report';
 }
 
@@ -89,8 +89,6 @@ export async function processExtractions(extractions: RawExtraction[]): Promise<
       continue;
     }
 
-    const isMasterList = ext.sourceUrl.includes('knowledge-base') || ext.sourceUrl.includes('list-methods');
-
     const entry: DDEvidenceEntry = {
       id: `e${nextId}`,
       sourceInstitutionSlug: sourceMatch.slug!,
@@ -100,8 +98,10 @@ export async function processExtractions(extractions: RawExtraction[]): Promise<
       observedOn: ext.observedDate,
       reportedOn: ext.extractedAt.slice(0, 10),
       datePrecision: ext.datePrecision,
-      sourceType: mapSourceType(ext.sourcePlatform, isMasterList),
+      sourceType: mapSourceType(ext.sourcePlatform),
       sourceUrl: ext.sourceUrl,
+      redditUsername: ext.redditUsername,
+      redditSubreddit: ext.redditSubreddit,
       extractConfidence: Math.round(ext.extractConfidence * 100) / 100,
       reviewStatus: 'pending',
       notes: ext.notes || undefined,
@@ -155,19 +155,42 @@ export async function writeResults(result: MergeResult, dryRun: boolean): Promis
     return;
   }
 
+  // Postgres `date` type requires YYYY-MM-DD. Normalize partial-precision values:
+  //   "YYYY"     → "YYYY-01-01"
+  //   "YYYY-MM"  → "YYYY-MM-01"
+  //   anything else passes through (already YYYY-MM-DD or null/undefined)
+  function normalizeDate(d: string | null | undefined): string | null {
+    if (!d) return null;
+    if (/^\d{4}$/.test(d)) return `${d}-01-01`;
+    if (/^\d{4}-\d{2}$/.test(d)) return `${d}-01`;
+    return d;
+  }
+
   // Insert into Supabase
   const supabase = getServiceClient();
-  const rows = result.newEntries.map(e => ({
+
+  // FK constraint: destination_bank_slug must exist in banks table.
+  // Brokerages/fintechs are valid SOURCES but not DESTINATIONS.
+  const { data: validBanks } = await supabase.from('banks').select('slug');
+  const bankSlugs = new Set((validBanks ?? []).map((b: any) => b.slug));
+  const filtered = result.newEntries.filter(e => bankSlugs.has(e.destinationBankSlug));
+  const rejected = result.newEntries.length - filtered.length;
+  if (rejected > 0) {
+    console.log(`Filtered ${rejected} entries with non-bank destination slugs`);
+  }
+  const rows = filtered.map(e => ({
     legacy_id: e.id,
     source_institution_slug: e.sourceInstitutionSlug,
     source_label: e.sourceLabel,
     destination_bank_slug: e.destinationBankSlug,
     outcome: e.outcome,
-    observed_on: e.observedOn ?? null,
-    reported_on: e.reportedOn,
+    observed_on: normalizeDate(e.observedOn),
+    reported_on: normalizeDate(e.reportedOn) ?? new Date().toISOString().slice(0, 10),
     date_precision: e.datePrecision,
     source_type: e.sourceType,
     source_url: e.sourceUrl ?? null,
+    reddit_username: e.redditUsername ?? null,
+    reddit_subreddit: e.redditSubreddit ?? null,
     extract_confidence: e.extractConfidence,
     review_status: e.reviewStatus,
     notes: e.notes ?? null,
@@ -180,5 +203,5 @@ export async function writeResults(result: MergeResult, dryRun: boolean): Promis
     if (error) throw new Error(`Failed to insert evidence batch ${i}: ${error.message}`);
   }
 
-  console.log(`\nInserted ${result.newEntries.length} new entries into Supabase dd_evidence`);
+  console.log(`\nInserted ${rows.length} new entries into Supabase dd_evidence`);
 }

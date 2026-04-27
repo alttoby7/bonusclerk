@@ -42,3 +42,4 @@ next-env.d.ts
 
 # scraper output
 scripts/scrape-dd/output/
+scripts/audit/backups/

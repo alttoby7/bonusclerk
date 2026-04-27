@@ -7,6 +7,7 @@ const QUALITY_WEIGHTS: Record<SourceType, number> = {
   trusted_user: 0.55,
   new_user: 0.35,
   anonymous: 0.20,
+  reddit_data_point: 0.85,
 };
 
 const HALF_LIFE_DAYS = 365;

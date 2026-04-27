@@ -53,6 +53,11 @@ export function Footer({ pillars }: { pillars: Pillar[] }) {
                 </Link>
               </li>
               <li>
+                <Link href="/dd-checker/methodology" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  DD Methodology
+                </Link>
+              </li>
+              <li>
                 <Link href="/bank-bonus-churning" className="text-sm text-slate-400 hover:text-white transition-colors">
                   Churning Guide
                 </Link>

@@ -10,6 +10,8 @@ export interface RawExtraction {
   datePrecision: 'exact' | 'month' | 'year' | 'unknown';
   extractConfidence: number;
   notes: string;
+  redditUsername?: string;
+  redditSubreddit?: string;
 }
 
 export interface RawComment {
@@ -17,6 +19,8 @@ export interface RawComment {
   url: string;
   platform: 'doc' | 'reddit';
   postedOn: string | null;
+  redditUsername?: string;
+  redditSubreddit?: string;
 }
 
 export interface ScraperResult {
@@ -36,6 +40,8 @@ export interface DDEvidenceEntry {
   datePrecision: 'exact' | 'month' | 'year' | 'unknown';
   sourceType: string;
   sourceUrl?: string;
+  redditUsername?: string;
+  redditSubreddit?: string;
   extractConfidence: number;
   reviewStatus: 'approved' | 'pending' | 'rejected';
   notes?: string;
