@@ -35,19 +35,20 @@ export default async function HomePage() {
         <Container className="py-16 md:py-20">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-extrabold tracking-tight text-text-primary md:text-5xl lg:text-6xl font-[var(--font-display)]">
-              Track Every Bank Bonus
-              <span className="text-accent"> Worth Your Time</span>
+              Get bonus alerts for
+              <span className="text-accent"> accounts you already have</span>
             </h1>
             <p className="mt-4 text-lg text-text-secondary md:text-xl leading-relaxed">
-              BonusClerk monitors {allBonuses.length}+ bank account bonuses so you never miss a deadline.
-              See what&apos;s live right now.
+              Tell us your existing banks and push sources. We&apos;ll only email you about bonuses
+              you actually qualify for. No newsletter, no spam — just personalized matches across
+              {' '}{allBonuses.length}+ tracked offers.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button href="/bonuses" size="lg">
-                Browse All Bonuses
+              <Button href="/alerts/setup" size="lg">
+                Set up my alerts
               </Button>
-              <Button href="/bank-bonus-churning" variant="outline" size="lg">
-                Churning Guide
+              <Button href="/bonuses" variant="outline" size="lg">
+                Browse all bonuses
               </Button>
             </div>
           </div>
