@@ -107,6 +107,7 @@ export default async function BankDDPage({ params }: Props) {
                 rollups={inboundRollups}
                 allInstitutions={allInstitutions}
                 evidenceBySource={evidenceBySource}
+                destSlug={slug}
               />
             </section>
 
@@ -133,7 +134,7 @@ export default async function BankDDPage({ params }: Props) {
                         return (
                           <tr key={r.destinationBankSlug} className="border-b border-border last:border-0 hover:bg-surface-raised/50">
                             <td className="px-3 py-2.5 font-medium text-text-primary">
-                              <Link href={`/dd-checker/${r.destinationBankSlug}`} className="hover:text-accent transition-colors">
+                              <Link href={`/dd-checker/${slug}/to/${r.destinationBankSlug}`} className="hover:text-accent transition-colors">
                                 {dest?.shortName ?? dest?.name ?? r.destinationBankSlug}
                               </Link>
                             </td>

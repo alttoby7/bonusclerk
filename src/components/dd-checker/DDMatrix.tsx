@@ -141,10 +141,16 @@ export function DDMatrix({
                               <div>Last verified: {rollup.latestObservedOn ? new Date(rollup.latestObservedOn).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : '—'}</div>
                             </div>
                             <Link
-                              href={`/dd-checker/${dest.slug}`}
-                              className="block mt-2 text-xs text-accent hover:underline"
+                              href={`/dd-checker/${source.slug}/to/${dest.slug}`}
+                              className="block mt-2 text-xs text-accent hover:underline font-medium"
                             >
-                              View bank details →
+                              View pair details →
+                            </Link>
+                            <Link
+                              href={`/dd-checker/${dest.slug}`}
+                              className="block mt-1 text-xs text-text-tertiary hover:text-accent"
+                            >
+                              All sources for {dest.shortName ?? dest.name}
                             </Link>
                           </div>
                         )}

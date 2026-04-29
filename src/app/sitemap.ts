@@ -1,16 +1,18 @@
 import type { MetadataRoute } from 'next';
 import { getAllPillars } from '@/lib/content-repository';
-import { getTrackedBanks } from '@/lib/dd/repository';
+import { getTrackedBanks, getAllEvidence, getAllInstitutions } from '@/lib/dd/repository';
 import { getAllBonuses } from '@/lib/bonus-repository';
 import { getAllArticles } from '@/lib/article-manifest';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://bonusclerk.com';
 
-  const [pillars, trackedBanks, allBonuses] = await Promise.all([
+  const [pillars, trackedBanks, allBonuses, ddEvidence, ddInstitutions] = await Promise.all([
     getAllPillars(),
     getTrackedBanks(),
     getAllBonuses(),
+    getAllEvidence(),
+    getAllInstitutions(),
   ]);
 
   const articles = getAllArticles();
@@ -57,5 +59,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...pillarPages, ...articlePages, ...ddBankPages, ...ddBonusMissionPages];
+  const trackedSet = new Set(ddInstitutions.filter(i => i.isTrackedBank).map(i => i.slug));
+  const instSet = new Set(ddInstitutions.map(i => i.slug));
+  const seenPairs = new Set<string>();
+  const ddPairPages: MetadataRoute.Sitemap = [];
+  for (const e of ddEvidence) {
+    const s = e.sourceInstitutionSlug;
+    const d = e.destinationBankSlug;
+    if (!s || !d || !instSet.has(s) || !trackedSet.has(d)) continue;
+    const key = `${s}|${d}`;
+    if (seenPairs.has(key)) continue;
+    seenPairs.add(key);
+    ddPairPages.push({
+      url: `${baseUrl}/dd-checker/${s}/to/${d}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    });
+  }
+
+  return [...staticPages, ...pillarPages, ...articlePages, ...ddBankPages, ...ddBonusMissionPages, ...ddPairPages];
 }

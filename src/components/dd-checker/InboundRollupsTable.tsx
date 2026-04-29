@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import type { Institution, DDPairRollup, DDEvidence } from '@/types/dd-checker';
 import { Card } from '@/components/ui/Card';
 import { StatusBadge } from './StatusBadge';
@@ -11,10 +12,12 @@ export function InboundRollupsTable({
   rollups,
   allInstitutions,
   evidenceBySource,
+  destSlug,
 }: {
   rollups: DDPairRollup[];
   allInstitutions: Institution[];
   evidenceBySource: Record<string, DDEvidence[]>;
+  destSlug?: string;
 }) {
   const [expandedSource, setExpandedSource] = useState<string | null>(null);
 
@@ -75,6 +78,14 @@ export function InboundRollupsTable({
                   {isExpanded && evidence.length > 0 && (
                     <div className="px-6 pb-3 border-b border-border bg-surface-raised/30 animate-slide-up">
                       <EvidenceTimeline evidence={evidence} />
+                      {destSlug && (
+                        <Link
+                          href={`/dd-checker/${r.sourceInstitutionSlug}/to/${destSlug}`}
+                          className="inline-block mt-2 text-xs text-accent hover:underline font-medium"
+                        >
+                          View full pair page →
+                        </Link>
+                      )}
                     </div>
                   )}
                 </td>
